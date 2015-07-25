@@ -197,12 +197,6 @@ Class factory method for the XCTestRun class.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method +testRunWithTest:
-Class factory method for the XCTestRun class.</p>
-			</div>
-			
 
 			
 
@@ -262,12 +256,6 @@ Designated initializer for the XCTestRun class.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -initWithTest:
-Designated initializer for the XCTestRun class.</p>
-			</div>
-			
 
 			
 
@@ -309,12 +297,6 @@ The test instance provided when the test run was initialized.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property test
-The test instance provided when the test run was initialized.</p>
-			</div>
 			
 
 			
@@ -358,12 +340,6 @@ Start a <a href="#//api/name/test">test</a> run. Must not be called more than on
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -start
-Start a <a href="#//api/name/test">test</a> run. Must not be called more than once.</p>
-			</div>
-			
 
 			
 
@@ -405,12 +381,6 @@ Stop a <a href="#//api/name/test">test</a> run. Must not be called unless the ru
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -stop
-Stop a <a href="#//api/name/test">test</a> run. Must not be called unless the run has been started. Must not be called more than once.</p>
-			</div>
 			
 
 			
@@ -454,12 +424,6 @@ The time at which the <a href="#//api/name/test">test</a> run was started, or ni
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property startDate
-The time at which the <a href="#//api/name/test">test</a> run was started, or nil.</p>
-			</div>
-			
 
 			
 
@@ -501,12 +465,6 @@ The time at which the <a href="#//api/name/test">test</a> run was stopped, or ni
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property stopDate
-The time at which the <a href="#//api/name/test">test</a> run was stopped, or nil.</p>
-			</div>
 			
 
 			
@@ -550,12 +508,6 @@ The number of seconds that elapsed between when the run was started and when it 
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property totalDuration
-The number of seconds that elapsed between when the run was started and when it was stopped.</p>
-			</div>
-			
 
 			
 
@@ -597,12 +549,6 @@ The number of seconds that elapsed between when the run was started and when it 
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property testDuration
-The number of seconds that elapsed between when the run was started and when it was stopped.</p>
-			</div>
 			
 
 			
@@ -646,12 +592,6 @@ The number of tests in the run.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property testCaseCount
-The number of tests in the run.</p>
-			</div>
-			
 
 			
 
@@ -693,12 +633,6 @@ The number of <a href="#//api/name/test">test</a> executions recorded during the
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property executionCount
-The number of <a href="#//api/name/test">test</a> executions recorded during the run.</p>
-			</div>
 			
 
 			
@@ -742,12 +676,6 @@ The number of <a href="#//api/name/test">test</a> failures recorded during the r
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property failureCount
-The number of <a href="#//api/name/test">test</a> failures recorded during the run.</p>
-			</div>
-			
 
 			
 
@@ -789,12 +717,6 @@ The number of uncaught exceptions recorded during the run.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property unexpectedExceptionCount
-The number of uncaught exceptions recorded during the run.</p>
-			</div>
 			
 
 			
@@ -838,12 +760,6 @@ The total number of <a href="#//api/name/test">test</a> failures and uncaught ex
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property totalFailureCount
-The total number of <a href="#//api/name/test">test</a> failures and uncaught exceptions recorded during the run.</p>
-			</div>
-			
 
 			
 
@@ -885,12 +801,6 @@ YES if all tests in the run completed their execution without recording any fail
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property hasSucceeded
-YES if all tests in the run completed their execution without recording any failures, otherwise NO.</p>
-			</div>
 			
 
 			
@@ -965,13 +875,6 @@ NO if it was the result of an uncaught exception.</p></td>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -recordFailureWithDescription:inFile:atLine:expected:
-Records a failure in the execution of the <a href="#//api/name/test">test</a> for this <a href="#//api/name/test">test</a> run. Must not be called
-unless the run has been started. Must not be called if the <a href="#//api/name/test">test</a> run has been stopped.</p>
-			</div>
-			
 
 			
 
@@ -1001,7 +904,7 @@ unless the run has been started. Must not be called if the <a href="#//api/name/
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-06-26</p>
+						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-07-25</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
