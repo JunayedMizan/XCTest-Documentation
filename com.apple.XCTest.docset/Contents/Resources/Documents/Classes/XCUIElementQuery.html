@@ -78,15 +78,23 @@
 		
 		<option value="//api/name/containingPredicate:">- containingPredicate:</option>
 		
+		<option value="//api/name/containingType:identifier:">- containingType:identifier:</option>
+		
 		<option value="//api/name/descendantsMatchingType:">- descendantsMatchingType:</option>
 		
 		<option value="//api/name/elementAtIndex:">- elementAtIndex:</option>
+		
+		<option value="//api/name/elementBoundByIndex:">- elementBoundByIndex:</option>
 		
 		<option value="//api/name/elementMatchingPredicate:">- elementMatchingPredicate:</option>
 		
 		<option value="//api/name/elementMatchingType:identifier:">- elementMatchingType:identifier:</option>
 		
+		<option value="//api/name/matchingIdentifier:">- matchingIdentifier:</option>
+		
 		<option value="//api/name/matchingPredicate:">- matchingPredicate:</option>
+		
+		<option value="//api/name/matchingType:identifier:">- matchingType:identifier:</option>
 		
 		<option value="//api/name/objectForKeyedSubscript:">- objectForKeyedSubscript:</option>
 		
@@ -114,7 +122,7 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Conforms to</th>
-	<td>XCUIElementTypeQueryProvider</td>
+	<td><a href="../Protocols/XCUIElementTypeQueryProvider.html">XCUIElementTypeQueryProvider</a></td>
 </tr><tr>
 	<th>Declared in</th>
 	<td>XCUIElementQuery.h</td>
@@ -169,11 +177,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns an element that will use the query for resolution.</p>
-			</div>
-			
 
 			
 
@@ -214,11 +217,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Evaluates the query at the time it is called and returns the number of matches found.</p>
-			</div>
 			
 
 			
@@ -261,10 +259,46 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns an <a href="#//api/name/element">element</a> that will resolve to the index into the query&rsquo;s result set.</p>
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCUIElementQuery.h</code></p>
 			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/elementBoundByIndex:" title="elementBoundByIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/elementBoundByIndex:">&ndash;&nbsp;elementBoundByIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <a href="#//api/name/element">element</a> that will use the index into the query&rsquo;s results to determine which underlying accessibility <a href="#//api/name/element">element</a> it is matched with.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (XCUIElement *)elementBoundByIndex:(NSUInteger)<em>index</em></code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -307,11 +341,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns an <a href="#//api/name/element">element</a> that matches the predicate.</p>
-			</div>
-			
 
 			
 
@@ -352,11 +381,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns an <a href="#//api/name/element">element</a> that matches the type and identifier.</p>
-			</div>
 			
 
 			
@@ -399,11 +423,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Keyed subscripting is implemented as a shortcut for matching an identifier only. For example, app.descendants[&ldquo;Foo&rdquo;] -> <a href="../Classes/XCUIElement.html">XCUIElement</a>.</p>
-			</div>
-			
 
 			
 
@@ -444,11 +463,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Immediately evaluates the query and returns an array of elements bound to the resulting accessibility elements.</p>
-			</div>
 			
 
 			
@@ -491,11 +505,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Immediately evaluates the query and returns an array of elements bound by the index of each result.</p>
-			</div>
-			
 
 			
 
@@ -536,11 +545,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns a new query that finds the descendants of all the elements found by the receiver.</p>
-			</div>
 			
 
 			
@@ -583,11 +587,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns a new query that finds the direct children of all the elements found by the receiver.</p>
-			</div>
-			
 
 			
 
@@ -629,11 +628,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns a new query that applies the specified attributes or predicate to the receiver.</p>
-			</div>
-			
 
 			
 
@@ -646,6 +640,38 @@
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matchingType:identifier:" title="matchingType:identifier:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchingType:identifier:">&ndash;&nbsp;matchingType:identifier:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (XCUIElementQuery *)matchingType:(XCUIElementType)<em>elementType</em> identifier:(nullable NSString *)<em>identifier</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matchingIdentifier:" title="matchingIdentifier:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchingIdentifier:">&ndash;&nbsp;matchingIdentifier:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (XCUIElementQuery *)matchingIdentifier:(NSString *)<em>identifier</em></code></div>
+
+		    
 		</div>
 	</div>
 </div><div class="section-method">
@@ -675,11 +701,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns a new query for finding elements that contain a descendant matching the specification.</p>
-			</div>
-			
 
 			
 
@@ -692,6 +713,22 @@
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/containingType:identifier:" title="containingType:identifier:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/containingType:identifier:">&ndash;&nbsp;containingType:identifier:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (XCUIElementQuery *)containingType:(XCUIElementType)<em>elementType</em> identifier:(nullable NSString *)<em>identifier</em></code></div>
+
+		    
 		</div>
 	</div>
 </div><div class="section-method">
@@ -726,16 +763,6 @@ This data should be used for debugging only - depending on any of the data as pa
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@discussion
-Provides debugging information about the query. The data in the string will vary based on the time
-at which it is captured, but it may include any of the following as well as additional data:
-    • A description of each step of the query.
-    • Information about the inputs and matched outputs of each step of the query.
-This data should be used for debugging only - depending on any of the data as part of a test is unsupported.</p>
-			</div>
-			
 
 			
 
@@ -765,7 +792,7 @@ This data should be used for debugging only - depending on any of the data as pa
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-06-26</p>
+						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-07-25</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

@@ -88,6 +88,8 @@
 		
 		<option value="//api/name/expectationForNotification:object:handler:">- expectationForNotification:object:handler:</option>
 		
+		<option value="//api/name/expectationForPredicate:evaluatedWithObject:handler:">- expectationForPredicate:evaluatedWithObject:handler:</option>
+		
 		<option value="//api/name/expectationWithDescription:">- expectationWithDescription:</option>
 		
 		<option value="//api/name/initWithInvocation:">- initWithInvocation:</option>
@@ -257,11 +259,6 @@ conditions have been fulfilled or a timeout occurs.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method +testCaseWithInvocation:</p>
-			</div>
-			
 
 			
 
@@ -302,11 +299,6 @@ conditions have been fulfilled or a timeout occurs.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -initWithInvocation:</p>
-			</div>
 			
 
 			
@@ -349,11 +341,6 @@ conditions have been fulfilled or a timeout occurs.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method +testCaseWithSelector:</p>
-			</div>
-			
 
 			
 
@@ -394,11 +381,6 @@ conditions have been fulfilled or a timeout occurs.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -initWithSelector:</p>
-			</div>
 			
 
 			
@@ -441,12 +423,6 @@ The invocation used when this test is run.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property invocation
-The invocation used when this test is run.</p>
-			</div>
 			
 
 			
@@ -491,13 +467,6 @@ should not be called directly.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -invokeTest
-Invoking a test performs its <a href="#//api/name/setUp">setUp</a>, <a href="#//api/name/invocation">invocation</a>, and <a href="#//api/name/tearDown">tearDown</a>. In general this
-should not be called directly.</p>
-			</div>
-			
 
 			
 
@@ -539,12 +508,6 @@ The test case behavior after a failure. Defaults to YES.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@property continueAfterFailure
-The test case behavior after a failure. Defaults to YES.</p>
-			</div>
 			
 
 			
@@ -618,12 +581,6 @@ NO if it was the result of an uncaught exception.</p></td>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -recordFailureWithDescription:inFile:atLine:expected:
-Records a failure in the execution of the test and is used by all test assertions.</p>
-			</div>
-			
 
 			
 
@@ -666,12 +623,6 @@ Invocations for each test method in the test case.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method +testInvocations
-Invocations for each test method in the test case.</p>
-			</div>
-			
 
 			
 
@@ -713,12 +664,6 @@ The names of the performance metrics to measure when invoking <a href="#//api/na
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method +defaultPerformanceMetrics
-The names of the performance metrics to measure when invoking <a href="#//api/name/measureBlock:">measureBlock:</a>. Returns XCTPerformanceMetric_WallClockTime by default. Subclasses can override this to change the behavior of <a href="#//api/name/measureBlock:">measureBlock:</a></p>
-			</div>
 			
 
 			
@@ -769,25 +714,17 @@ The names of the performance metrics to measure when invoking <a href="#//api/na
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<ul>
-<li>@method -measureBlock:
-*</li>
-<li>Call from a test method to measure resources (<a href="#//api/name/defaultPerformanceMetrics">defaultPerformanceMetrics</a>) used by the</li>
-<li><p>block in the current process.</p>
+				<pre><code>- (void)testPerformanceOfMyFunction {
 
-<ul>
-<li><p>(void)testPerformanceOfMyFunction {</p>
-
-<pre><code>  [self measureBlock:^{
-  // Do that thing you want to measure.
-  MyFunction();
+        [self measureBlock:^{
+        // Do that thing you want to measure.
+        MyFunction();
+    }];
+}
 </code></pre>
 
-<p>  }];
-}</p></li>
-</ul>
-</li>
-<li><p>@param block A block whose performance to measure.</p></li>
+<ul>
+<li>@param block A block whose performance to measure.</li>
 </ul>
 
 			</div>
@@ -846,38 +783,25 @@ The names of the performance metrics to measure when invoking <a href="#//api/na
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<ul>
-<li>@method -measureMetrics:automaticallyStartMeasuring:forBlock:
-*</li>
-<li>Call from a test method to measure resources (XCTPerformanceMetrics) used by the</li>
-<li>block in the current process. Each metric will be measured across calls to the block.</li>
-<li>The number of times the block will be called is undefined and may change in the</li>
-<li>future. For one example of why, as long as the requested performance metrics do</li>
-<li>not interfere with each other the API will measure all metrics across the same</li>
-<li>calls to the block. If the performance metrics may interfere the API will measure</li>
-<li><p>them separately.</p>
+				<pre><code>- (void)testMyFunction2_WallClockTime {
+    [self measureMetrics:[[self class] defaultPerformanceMetrics] automaticallyStartMeasuring:NO forBlock:^{
 
-<ul>
-<li><p>(void)testMyFunction2_WallClockTime {
-  [self measureMetrics:[[self class] defaultPerformanceMetrics] automaticallyStartMeasuring:NO forBlock:^{</p>
+        // Do setup work that needs to be done for every iteration but you don't want to measure before the call to -startMeasuring
+        SetupSomething();
+        [self startMeasuring];
 
-<pre><code>  // Do setup work that needs to be done for every iteration but you don't want to measure before the call to -startMeasuring
-  SetupSomething();
-  [self startMeasuring];
+        // Do that thing you want to measure.
+        MyFunction();
+        [self stopMeasuring];
 
-  // Do that thing you want to measure.
-  MyFunction();
-  [self stopMeasuring];
-
-  // Do teardown work that needs to be done for every iteration but you don't want to measure after the call to stopMeasuring
-  TeardownSomething();
+        // Do teardown work that needs to be done for every iteration but you don't want to measure after the call to stopMeasuring
+        TeardownSomething();
+    }];
+}
 </code></pre>
 
-<p>  }];
-}</p></li>
-</ul>
-</li>
-<li><p>Caveats:</p></li>
+<ul>
+<li>Caveats:</li>
 <li>• If YES was passed for automaticallyStartMeasuring and <a href="#//api/name/startMeasuring">startMeasuring</a> is called</li>
 <li>   anyway, the test will fail.</li>
 <li>• If NO was passed for automaticallyStartMeasuring then <a href="#//api/name/startMeasuring">startMeasuring</a> must be</li>
@@ -936,13 +860,6 @@ Measurement of metrics will start at this point.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -startMeasuring
-Call this from within a measure block to set the beginning of the critical section.
-Measurement of metrics will start at this point.</p>
-			</div>
-			
 
 			
 
@@ -985,13 +902,6 @@ Measurement of metrics will stop at this point.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -stopMeasuring
-Call this from within a measure block to set the ending of the critical section.
-Measurement of metrics will stop at this point.</p>
-			</div>
 			
 
 			
@@ -1044,9 +954,7 @@ Measurement of metrics will stop at this point.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method +expectationWithDescription:</p>
-
-<p>@param description
+				<p>@param description
 This string will be displayed in the test log to help diagnose failures.</p>
 
 <p>@discussion
@@ -1096,9 +1004,7 @@ Creates and returns an expectation associated with the test case.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method -waitForExpectationsWithTimeout:handler:</p>
-
-<p>@param timeout
+				<p>@param timeout
 The amount of time within which all expectations must be fulfilled.</p>
 
 <p>@param handler
@@ -1158,9 +1064,7 @@ loop while using this API.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method keyValueObservingExpectationForObject:keyPath:expectedValue:</p>
-
-<p>@discussion
+				<p>@discussion
 A convenience method for asynchronous tests that use Key Value Observing to detect changes
 to values on an object. This variant takes an expected value and observes changes on the object
 until the keyPath&rsquo;s value matches the expected value using [NSObject isEqual:]. If
@@ -1224,9 +1128,7 @@ Creates and returns an expectation associated with the test case.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method keyValueObservingExpectationForObject:keyPath:handler:</p>
-
-<p>@discussion
+				<p>@discussion
 Variant of the convenience for tests that use Key Value Observing. Takes a handler
 block instead of an expected value. Every KVO change will run the handler block until
 it returns YES (or the wait times out). Returning YES from the block will fulfill the
@@ -1289,9 +1191,7 @@ Creates and returns an expectation associated with the test case.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method expectationForNotification:object:handler:</p>
-
-<p>@discussion
+				<p>@discussion
 A convenience method for asynchronous tests that observe NSNotifications.</p>
 
 <p>@param notificationName
@@ -1308,6 +1208,50 @@ observed object.</p>
 <p>@return
 Creates and returns an expectation associated with the test case.</p>
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCTestCase+AsynchronousTesting.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/expectationForPredicate:evaluatedWithObject:handler:" title="expectationForPredicate:evaluatedWithObject:handler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/expectationForPredicate:evaluatedWithObject:handler:">&ndash;&nbsp;expectationForPredicate:evaluatedWithObject:handler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@method expectationForPredicate:evaluatedWithObject:handler:
+Creates an expectation that is fulfilled if the predicate returns true when evaluated with the given
+object. The expectation periodically evaluates the predicate and also may use notifications or other
+events to optimistically re-evaluate.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (XCTestExpectation *)expectationForPredicate:(NSPredicate *)<em>predicate</em> evaluatedWithObject:(id)<em>object</em> handler:(nullable XCPredicateExpectationHandler)<em>handler</em></code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -1359,12 +1303,6 @@ Returns a test suite containing test cases for all of the tests in the class.</p
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method +defaultTestSuite
-Returns a test suite containing test cases for all of the tests in the class.</p>
-			</div>
-			
 
 			
 
@@ -1406,12 +1344,6 @@ Setup method called before the <a href="#//api/name/invocation">invocation</a> o
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method +setUp
-Setup method called before the <a href="#//api/name/invocation">invocation</a> of any test method in the class.</p>
-			</div>
 			
 
 			
@@ -1455,12 +1387,6 @@ Teardown method called after the <a href="#//api/name/invocation">invocation</a>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>@method +testDown
-Teardown method called after the <a href="#//api/name/invocation">invocation</a> of every test method in the class.</p>
-			</div>
-			
 
 			
 
@@ -1490,7 +1416,7 @@ Teardown method called after the <a href="#//api/name/invocation">invocation</a>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-06-26</p>
+						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-07-25</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
