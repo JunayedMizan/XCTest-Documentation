@@ -13,7 +13,26 @@ Xcode 7 Beta includes the new UI Testing framework but nothing is officially doc
 
 ## Generation
 
-The docset was generated via [appledoc](https://github.com/tomaz/appledoc#readme) from:
-````
-/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework
-````
+The docset was generated via [appledoc](https://github.com/tomaz/appledoc#readme).
+
+```
+appledoc \
+--project-name "XCTest" \
+--project-company "Apple" \
+--company-id "com.apple" \
+--output "./docset" \
+--logformat xcode \
+--keep-undocumented-objects \
+--keep-undocumented-members \
+--keep-intermediate-files \
+--no-repeat-first-par \
+--no-warn-invalid-crossref \
+--install-docset \
+"/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework"
+```
+
+This will create the docset at `./docset` and install it in the shared directory:
+
+```
+~/Library/Developer/Shared/Documentation/DocSets
+```
