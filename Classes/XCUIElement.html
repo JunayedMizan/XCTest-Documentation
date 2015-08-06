@@ -82,6 +82,8 @@
 		
 		<option value="//api/name/clickForDuration:thenDragToElement:">- clickForDuration:thenDragToElement:</option>
 		
+		<option value="//api/name/coordinateWithNormalizedOffset:">- coordinateWithNormalizedOffset:</option>
+		
 		<option value="//api/name/descendantsMatchingType:">- descendantsMatchingType:</option>
 		
 		<option value="//api/name/doubleClick">- doubleClick</option>
@@ -90,11 +92,15 @@
 		
 		<option value="//api/name/hover">- hover</option>
 		
+		<option value="//api/name/pinchWithScale:velocity:">- pinchWithScale:velocity:</option>
+		
 		<option value="//api/name/pressForDuration:">- pressForDuration:</option>
 		
 		<option value="//api/name/pressForDuration:thenDragToElement:">- pressForDuration:thenDragToElement:</option>
 		
 		<option value="//api/name/rightClick">- rightClick</option>
+		
+		<option value="//api/name/rotate:withVelocity:">- rotate:withVelocity:</option>
 		
 		<option value="//api/name/scrollByDeltaX:deltaY:">- scrollByDeltaX:deltaY:</option>
 		
@@ -107,6 +113,8 @@
 		<option value="//api/name/swipeUp">- swipeUp</option>
 		
 		<option value="//api/name/tap">- tap</option>
+		
+		<option value="//api/name/tapWithNumberOfTaps:numberOfTouches:">- tapWithNumberOfTaps:numberOfTouches:</option>
 		
 		<option value="//api/name/twoFingerTap">- twoFingerTap</option>
 		
@@ -313,6 +321,47 @@ will be resolved. If zero or multiple matches are found, an error will be raised
 		    
 
 			<div class="method-subsection method-declaration"><code>- (XCUIElementQuery *)childrenMatchingType:(XCUIElementType)<em>type</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCUIElement.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/coordinateWithNormalizedOffset:" title="coordinateWithNormalizedOffset:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/coordinateWithNormalizedOffset:">&ndash;&nbsp;coordinateWithNormalizedOffset:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a new coordinate that will compute its screen point by adding the offset multiplied by the size of the element’s frame to the origin of the element’s frame.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (XCUICoordinate *)coordinateWithNormalizedOffset:(CGVector)<em>normalizedOffset</em></code></div>
 
 		    
 			
@@ -547,6 +596,56 @@ it strictly interprets the provided text. To input keys with modifier flags, use
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCUIElement.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tapWithNumberOfTaps:numberOfTouches:" title="tapWithNumberOfTaps:numberOfTouches:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tapWithNumberOfTaps:numberOfTouches:">&ndash;&nbsp;tapWithNumberOfTaps:numberOfTouches:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends one or more taps with one of more touch points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)tapWithNumberOfTaps:(NSUInteger)<em>numberOfTaps</em> numberOfTouches:(NSUInteger)<em>numberOfTouches</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@param numberOfTaps
+The number of taps.</p>
+
+<p>@param numberOfTouches
+The number of touch points.</p>
+			</div>
 			
 
 			
@@ -803,6 +902,112 @@ The element to finish the drag gesture over. In the example of table cell reorde
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCUIElement.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pinchWithScale:velocity:" title="pinchWithScale:velocity:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pinchWithScale:velocity:">&ndash;&nbsp;pinchWithScale:velocity:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends a pinching gesture with two touches.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)pinchWithScale:(CGFloat)<em>scale</em> velocity:(CGFloat)<em>velocity</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The system makes a best effort to synthesize the requested scale and velocity: absolute accuracy is not guaranteed.
+Some values may not be possible based on the size of the element&rsquo;s frame - these will result in test failures.</p>
+
+<p>@param scale
+The scale of the pinch gesture.  Use a scale between 0 and 1 to &ldquo;pinch close&rdquo; or zoom out and a scale greater than 1 to &ldquo;pinch open&rdquo; or zoom in.</p>
+
+<p>@param velocity
+The velocity of the pinch in scale factor per second.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCUIElement.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rotate:withVelocity:" title="rotate:withVelocity:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rotate:withVelocity:">&ndash;&nbsp;rotate:withVelocity:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends a rotation gesture with two touches.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)rotate:(CGFloat)<em>rotation</em> withVelocity:(CGFloat)<em>velocity</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The system makes a best effort to synthesize the requested rotation and velocity: absolute accuracy is not guaranteed.
+Some values may not be possible based on the size of the element&rsquo;s frame - these will result in test failures.</p>
+
+<p>@param rotation
+The rotation of the gesture in radians.</p>
+
+<p>@param velocity
+The velocity of the rotation gesture in radians per second.</p>
+			</div>
 			
 
 			
@@ -1167,7 +1372,7 @@ command, control, option, and function keys can be typed using constants defined
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-07-25</p>
+						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-08-06</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
