@@ -1,4 +1,0 @@
-Documentation set was installed to Xcode!
-
-Path: /Users/joemasilotti/Library/Developer/Shared/Documentation/DocSets/com.apple.XCTest.docset
-Time: 2015-08-06 18:42:03 +0000
