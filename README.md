@@ -2,7 +2,7 @@
 
 Unofficial documentation for `XCTest`, including UI Testing, introduced in iOS 9.
 
-[View the documentation in your browser.](http://joemasilotti.github.io/XCTest-Documentation/)
+[View the documentation in your browser.](http://masilotti.com/xctest-documentation/)
 
 ## Usage
 
