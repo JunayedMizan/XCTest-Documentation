@@ -1,4 +1,4 @@
-# `XCTest` Documentation - Xcode 7 Beta 5
+# `XCTest` Documentation - Xcode 7 Beta 6
 
 Unofficial documentation for `XCTest`, including UI Testing, introduced in iOS 9.
 
