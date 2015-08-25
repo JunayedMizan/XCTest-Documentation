@@ -291,41 +291,34 @@ Measurement of metrics will stop at this point.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/XCTestCase/defaultTestSuite</TokenIdentifier>
-			<Abstract type="html">@method +defaultTestSuite
-Returns a test suite containing test cases for all of the tests in the class.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/XCTestCase/addUIInterruptionMonitorWithDescription:handler:</TokenIdentifier>
+			<Abstract type="html">Adds a handler to the current context. Returns a token that can be used to unregister the handler. Handlers are invoked in the reverse order in which they are added until one of the handlers returns true, indicating that it has handled the alert.</Abstract>
 			<DeclaredIn>XCTestCase.h</DeclaredIn>
 			
-			<Declaration>+ (XCTestSuite *)defaultTestSuite</Declaration>
+			<Declaration>- (id&lt;NSObject&gt;)addUIInterruptionMonitorWithDescription:(NSString *)handlerDescription handler:(BOOL ( ^ ) ( XCUIElement *interruptingElement ))handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>handlerDescription</Name>
+					<Abstract type="html">Explanation of the behavior and purpose of this handler, mainly used for debugging and analysis.</Abstract>
+				</Parameter><Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">Handler block for asynchronous UI such as alerts and other dialogs. Handlers should return true if they handled the UI, false if they did not. The handler is passed an XCUIElement representing the top level UI element for the alert.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/defaultTestSuite</Anchor>
+			<Anchor>//api/name/addUIInterruptionMonitorWithDescription:handler:</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/XCTestCase/setUp</TokenIdentifier>
-			<Abstract type="html">@method +setUp
-Setup method called before the invocation of any test method in the class.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/XCTestCase/removeUIInterruptionMonitor:</TokenIdentifier>
+			<Abstract type="html">Removes a handler using the token provided when it was added.</Abstract>
 			<DeclaredIn>XCTestCase.h</DeclaredIn>
 			
-			<Declaration>+ (void)setUp</Declaration>
+			<Declaration>- (void)removeUIInterruptionMonitor:(id&lt;NSObject&gt;)monitor</Declaration>
 			
 			
-			<Anchor>//api/name/setUp</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/XCTestCase/tearDown</TokenIdentifier>
-			<Abstract type="html">@method +testDown
-Teardown method called after the invocation of every test method in the class.</Abstract>
-			<DeclaredIn>XCTestCase.h</DeclaredIn>
-			
-			<Declaration>+ (void)tearDown</Declaration>
-			
-			
-			<Anchor>//api/name/tearDown</Anchor>
+			<Anchor>//api/name/removeUIInterruptionMonitor:</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
@@ -401,6 +394,45 @@ events to optimistically re-evaluate.</Abstract>
 			
 			
 			<Anchor>//api/name/expectationForPredicate:evaluatedWithObject:handler:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/XCTestCase/defaultTestSuite</TokenIdentifier>
+			<Abstract type="html">@method +defaultTestSuite
+Returns a test suite containing test cases for all of the tests in the class.</Abstract>
+			<DeclaredIn>XCTestCase.h</DeclaredIn>
+			
+			<Declaration>+ (XCTestSuite *)defaultTestSuite</Declaration>
+			
+			
+			<Anchor>//api/name/defaultTestSuite</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/XCTestCase/setUp</TokenIdentifier>
+			<Abstract type="html">@method +setUp
+Setup method called before the invocation of any test method in the class.</Abstract>
+			<DeclaredIn>XCTestCase.h</DeclaredIn>
+			
+			<Declaration>+ (void)setUp</Declaration>
+			
+			
+			<Anchor>//api/name/setUp</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/XCTestCase/tearDown</TokenIdentifier>
+			<Abstract type="html">@method +testDown
+Teardown method called after the invocation of every test method in the class.</Abstract>
+			<DeclaredIn>XCTestCase.h</DeclaredIn>
+			
+			<Declaration>+ (void)tearDown</Declaration>
+			
+			
+			<Anchor>//api/name/tearDown</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

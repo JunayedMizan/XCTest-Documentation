@@ -177,6 +177,54 @@ This data should be used for debugging only - depending on any of the data as pa
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/XCUIElement/adjustToNormalizedSliderPosition:</TokenIdentifier>
+			<Abstract type="html">Manipulates the UI to change the displayed value of the slider to one based on a normalized position. 0 corresponds to the minimum value of the slider, 1 corresponds to its maximum value. The adjustment is a &quot;best effort&quot; to move the indicator to the desired position; absolute fidelity is not guaranteed.</Abstract>
+			<DeclaredIn>XCUIElement.h</DeclaredIn>
+			
+			<Declaration>- (void)adjustToNormalizedSliderPosition:(CGFloat)normalizedSliderPosition</Declaration>
+			
+			
+			<Anchor>//api/name/adjustToNormalizedSliderPosition:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/XCUIElement/setNormalizedSliderPosition:</TokenIdentifier>
+			<Abstract type="html">Returns the position of the slider&apos;s indicator as a normalized value where 0 corresponds to the minimum value of the slider and 1 corresponds to its maximum value.</Abstract>
+			<DeclaredIn>XCUIElement.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) CGFloat normalizedSliderPosition</Declaration>
+			
+			
+			<Anchor>//api/name/normalizedSliderPosition</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/XCUIElement/normalizedSliderPosition</TokenIdentifier>
+			<Abstract type="html">Returns the position of the slider&apos;s indicator as a normalized value where 0 corresponds to the minimum value of the slider and 1 corresponds to its maximum value.</Abstract>
+			<DeclaredIn>XCUIElement.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) CGFloat normalizedSliderPosition</Declaration>
+			
+			
+			<Anchor>//api/name/normalizedSliderPosition</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/XCUIElement/normalizedSliderPosition</TokenIdentifier>
+			<Abstract type="html">Returns the position of the slider&apos;s indicator as a normalized value where 0 corresponds to the minimum value of the slider and 1 corresponds to its maximum value.</Abstract>
+			<DeclaredIn>XCUIElement.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) CGFloat normalizedSliderPosition</Declaration>
+			
+			
+			<Anchor>//api/name/normalizedSliderPosition</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/XCUIElement/typeText:</TokenIdentifier>
 			<Abstract type="html">Types a string into the element. The element or a descendant must have keyboard focus; otherwise an
 error is raised.</Abstract>
@@ -436,6 +484,18 @@ command, control, option, and function keys can be typed using constants defined
 			
 			
 			<Anchor>//api/name/scrollByDeltaX:deltaY:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/XCUIElement/adjustToPickerWheelValue:</TokenIdentifier>
+			<Abstract type="html">Changes the displayed value for the picker wheel. Will generate a test failure if the specified value is not available.</Abstract>
+			<DeclaredIn>XCUIElement.h</DeclaredIn>
+			
+			<Declaration>- (void)adjustToPickerWheelValue:(NSString *)pickerWheelValue</Declaration>
+			
+			
+			<Anchor>//api/name/adjustToPickerWheelValue:</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>XCUIUserInterfaceSizeClass Constants Reference</title>
+	<title>XCUIDeviceButton Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">XCUIUserInterfaceSizeClass Constants Reference</h1>
+					<h1 class="title">XCUIDeviceButton Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>XCUIElementAttributes.h</td>
+	<td>XCUIDevice.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,19 +75,36 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">XCUIUserInterfaceSizeClass</h3>
+                    <h3 class="subsubtitle method-title">XCUIDeviceButton</h3>
                     
+					
+					<div class="section section-overview">
+                        <p>@enum XCUIDeviceButton</p>
+
+<p>Represents a physical button on a device.</p><div class="note"><p><strong>Note:</strong> Some buttons are not available in the Simulator, and should not be used in your tests.
+You can use a block like this:</p>
+
+<h1>if !TARGET_OS_SIMULATOR</h1>
+
+<p>// test code that depends on buttons not available in the Simulator</p>
+
+<h1>endif</h1>
+
+<p>in your test code to ensure it does not call unavailable APIs.</p></div>
+					</div>
+					
+					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, XCUIUserInterfaceSizeClass ) {<br>
+                        <code>typedef NS_ENUM(NSInteger, XCUIDeviceButton ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">XCUIUserInterfaceSizeClassUnspecified</a> = UIUserInterfaceSizeClassUnspecified,<br>
+                            &nbsp;&nbsp; <a href="">XCUIDeviceButtonHome</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">XCUIUserInterfaceSizeClassCompact</a> = UIUserInterfaceSizeClassCompact,<br>
+                            &nbsp;&nbsp; <a href="">XCUIDeviceButtonVolumeUp</a> = 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">XCUIUserInterfaceSizeClassRegular</a> = UIUserInterfaceSizeClassRegular,<br>
+                            &nbsp;&nbsp; <a href="">XCUIDeviceButtonVolumeDown</a> = 3,<br>
                             
                             };</code>
                     
@@ -97,32 +114,53 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="XCUIUserInterfaceSizeClassUnspecified"></a><code>XCUIUserInterfaceSizeClassUnspecified</code></dt>
+                            <dt><a name="" title="XCUIDeviceButtonHome"></a><code>XCUIDeviceButtonHome</code></dt>
 <dd>
+
+
+<p>@enum XCUIDeviceButton</p>
+
+
+
+
 
     
 	<p>
-		Declared In <code class="declared-in-ref">XCUIElementAttributes.h</code>.
+		Declared In <code class="declared-in-ref">XCUIDevice.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="XCUIUserInterfaceSizeClassCompact"></a><code>XCUIUserInterfaceSizeClassCompact</code></dt>
+                            <dt><a name="" title="XCUIDeviceButtonVolumeUp"></a><code>XCUIDeviceButtonVolumeUp</code></dt>
 <dd>
+
+
+<p>@enum XCUIDeviceButton</p>
+
+
+
+
 
     
 	<p>
-		Declared In <code class="declared-in-ref">XCUIElementAttributes.h</code>.
+		Declared In <code class="declared-in-ref">XCUIDevice.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="XCUIUserInterfaceSizeClassRegular"></a><code>XCUIUserInterfaceSizeClassRegular</code></dt>
+                            <dt><a name="" title="XCUIDeviceButtonVolumeDown"></a><code>XCUIDeviceButtonVolumeDown</code></dt>
 <dd>
+
+
+<p>@enum XCUIDeviceButton</p>
+
+
+
+
 
     
 	<p>
-		Declared In <code class="declared-in-ref">XCUIElementAttributes.h</code>.
+		Declared In <code class="declared-in-ref">XCUIDevice.h</code>.
 	</p>
 	
 </dd>
@@ -131,6 +169,17 @@
                     </div>
                     
 
+                    
+                    
+
+                    
+
+                    
+                    <div class="method-subsection declared-in-section">
+                        <h4 class="method-subtitle">Declared In</h4>
+                        <p><code class="declared-in-ref">XCUIDevice.h</code></p>
+                    </div>
+                    
                     
                     
                     

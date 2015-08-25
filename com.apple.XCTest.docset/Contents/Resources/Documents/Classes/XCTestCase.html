@@ -86,6 +86,8 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/addUIInterruptionMonitorWithDescription:handler:">- addUIInterruptionMonitorWithDescription:handler:</option>
+		
 		<option value="//api/name/expectationForNotification:object:handler:">- expectationForNotification:object:handler:</option>
 		
 		<option value="//api/name/expectationForPredicate:evaluatedWithObject:handler:">- expectationForPredicate:evaluatedWithObject:handler:</option>
@@ -107,6 +109,8 @@
 		<option value="//api/name/measureMetrics:automaticallyStartMeasuring:forBlock:">- measureMetrics:automaticallyStartMeasuring:forBlock:</option>
 		
 		<option value="//api/name/recordFailureWithDescription:inFile:atLine:expected:">- recordFailureWithDescription:inFile:atLine:expected:</option>
+		
+		<option value="//api/name/removeUIInterruptionMonitor:">- removeUIInterruptionMonitor:</option>
 		
 		<option value="//api/name/startMeasuring">- startMeasuring</option>
 		
@@ -917,17 +921,9 @@ Measurement of metrics will stop at this point.</p>
 			
 		</div>
 	</div>
-</div>
-						</div>
-						
-
-						<a title="XCTestSuiteExtensions Methods" name="task_XCTestSuiteExtensions Methods"></a>
-						<h2 class="task-title">XCTestSuiteExtensions Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/defaultTestSuite" title="defaultTestSuite"></a>
-	<h3 class="method-title"><code><a href="#//api/name/defaultTestSuite">+&nbsp;defaultTestSuite</a></code>
+</div><div class="section-method">
+	<a name="//api/name/addUIInterruptionMonitorWithDescription:handler:" title="addUIInterruptionMonitorWithDescription:handler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addUIInterruptionMonitorWithDescription:handler:">&ndash;&nbsp;addUIInterruptionMonitorWithDescription:handler:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -937,15 +933,31 @@ Measurement of metrics will stop at this point.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@method +defaultTestSuite
-Returns a test suite containing test cases for all of the tests in the class.</p>
+				<p>Adds a handler to the current context. Returns a token that can be used to unregister the handler. Handlers are invoked in the reverse order in which they are added until one of the handlers returns true, indicating that it has handled the alert.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (XCTestSuite *)defaultTestSuite</code></div>
+			<div class="method-subsection method-declaration"><code>- (id&lt;NSObject&gt;)addUIInterruptionMonitorWithDescription:(NSString *)<em>handlerDescription</em> handler:(BOOL ( ^ ) ( XCUIElement *interruptingElement ))<em>handler</em></code></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>handlerDescription</code></th>
+						<td><p>Explanation of the behavior and purpose of this handler, mainly used for debugging and analysis.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>handler</code></th>
+						<td><p>Handler block for asynchronous UI such as alerts and other dialogs. Handlers should return true if they handled the UI, false if they did not. The handler is passed an <a href="../Classes/XCUIElement.html">XCUIElement</a> representing the top level UI element for the alert.</p></td>
+					</tr>
+				
+				</table>
+			</div>
 			
 
 			
@@ -968,8 +980,8 @@ Returns a test suite containing test cases for all of the tests in the class.</p
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/setUp" title="setUp"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setUp">+&nbsp;setUp</a></code>
+	<a name="//api/name/removeUIInterruptionMonitor:" title="removeUIInterruptionMonitor:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeUIInterruptionMonitor:">&ndash;&nbsp;removeUIInterruptionMonitor:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -979,55 +991,12 @@ Returns a test suite containing test cases for all of the tests in the class.</p
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@method +setUp
-Setup method called before the <a href="#//api/name/invocation">invocation</a> of any test method in the class.</p>
+				<p>Removes a handler using the token provided when it was added.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (void)setUp</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">XCTestCase.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/tearDown" title="tearDown"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tearDown">+&nbsp;tearDown</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>@method +testDown
-Teardown method called after the <a href="#//api/name/invocation">invocation</a> of every test method in the class.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (void)tearDown</code></div>
+			<div class="method-subsection method-declaration"><code>- (void)removeUIInterruptionMonitor:(id&lt;NSObject&gt;)<em>monitor</em></code></div>
 
 		    
 			
@@ -1404,6 +1373,140 @@ events to optimistically re-evaluate.</p>
 </div>
 						</div>
 						
+
+						<a title="XCTestSuiteExtensions Methods" name="task_XCTestSuiteExtensions Methods"></a>
+						<h2 class="task-title">XCTestSuiteExtensions Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/defaultTestSuite" title="defaultTestSuite"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultTestSuite">+&nbsp;defaultTestSuite</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@method +defaultTestSuite
+Returns a test suite containing test cases for all of the tests in the class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (XCTestSuite *)defaultTestSuite</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCTestCase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setUp" title="setUp"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setUp">+&nbsp;setUp</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@method +setUp
+Setup method called before the <a href="#//api/name/invocation">invocation</a> of any test method in the class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setUp</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCTestCase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tearDown" title="tearDown"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tearDown">+&nbsp;tearDown</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@method +testDown
+Teardown method called after the <a href="#//api/name/invocation">invocation</a> of every test method in the class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)tearDown</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCTestCase.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
 					</div>
 					
 					
@@ -1416,7 +1519,7 @@ events to optimistically re-evaluate.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-08-06</p>
+						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-08-25</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

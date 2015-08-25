@@ -62,6 +62,8 @@
 		
 		<option value="//api/name/hittable">hittable</option>
 		
+		<option value="//api/name/normalizedSliderPosition">normalizedSliderPosition</option>
+		
 	</optgroup>
 	
 
@@ -75,6 +77,10 @@
 
 	
 	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/adjustToNormalizedSliderPosition:">- adjustToNormalizedSliderPosition:</option>
+		
+		<option value="//api/name/adjustToPickerWheelValue:">- adjustToPickerWheelValue:</option>
 		
 		<option value="//api/name/childrenMatchingType:">- childrenMatchingType:</option>
 		
@@ -163,9 +169,13 @@
 Elements are objects encapsulating the information needed to dynamically locate a user interface
 element in an application. Elements are described in terms of queries /seealso <a href="../Classes/XCUIElementQuery.html">XCUIElementQuery</a>.</p>
 
+<p>This category on XCUIElement provides functionality for automating UISlider and NSSlider.</p>
+
 <p>@category Events
 Events that can be synthesized relative to an XCUIElement object. When an event API is called, the element
 will be resolved. If zero or multiple matches are found, an error will be raised.</p>
+
+<p>This category on XCUIElement provides functionality for automating the picker wheels of UIPickerViews and UIDatePickers.</p>
 					</div>
 					
 					
@@ -409,6 +419,96 @@ This data should be used for debugging only - depending on any of the data as pa
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (readonly, copy) NSString *debugDescription</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCUIElement.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="XCUIElementTypeSlider Methods" name="task_XCUIElementTypeSlider Methods"></a>
+						<h2 class="task-title">XCUIElementTypeSlider Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/adjustToNormalizedSliderPosition:" title="adjustToNormalizedSliderPosition:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/adjustToNormalizedSliderPosition:">&ndash;&nbsp;adjustToNormalizedSliderPosition:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Manipulates the UI to change the displayed value of the slider to one based on a normalized position. 0 corresponds to the minimum value of the slider, 1 corresponds to its maximum value. The adjustment is a &ldquo;best effort&rdquo; to move the indicator to the desired position; absolute fidelity is not guaranteed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)adjustToNormalizedSliderPosition:(CGFloat)<em>normalizedSliderPosition</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCUIElement.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/normalizedSliderPosition" title="normalizedSliderPosition"></a>
+	<h3 class="method-title"><code><a href="#//api/name/normalizedSliderPosition">&nbsp;&nbsp;normalizedSliderPosition</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the position of the slider&rsquo;s indicator as a normalized value where 0 corresponds to the minimum value of the slider and 1 corresponds to its maximum value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) CGFloat normalizedSliderPosition</code></div>
 
 		    
 			
@@ -1360,6 +1460,55 @@ command, control, option, and function keys can be typed using constants defined
 </div>
 						</div>
 						
+
+						<a title="XCUIElementTypePickerWheel Methods" name="task_XCUIElementTypePickerWheel Methods"></a>
+						<h2 class="task-title">XCUIElementTypePickerWheel Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/adjustToPickerWheelValue:" title="adjustToPickerWheelValue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/adjustToPickerWheelValue:">&ndash;&nbsp;adjustToPickerWheelValue:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Changes the displayed value for the picker wheel. Will generate a test failure if the specified value is not available.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)adjustToPickerWheelValue:(NSString *)<em>pickerWheelValue</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">XCUIElement.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
 					</div>
 					
 					
@@ -1372,7 +1521,7 @@ command, control, option, and function keys can be typed using constants defined
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-08-06</p>
+						<p class="copyright">Copyright &copy; 2015 Apple. All rights reserved. Updated: 2015-08-25</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

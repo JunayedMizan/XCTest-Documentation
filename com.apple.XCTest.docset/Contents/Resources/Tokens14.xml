@@ -60,6 +60,18 @@
             <NodeRef refid="14"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/XCUIDevice/pressButton:</TokenIdentifier>
+			<Abstract type="html">Simulates the user pressing a physical button.</Abstract>
+			<DeclaredIn>XCUIDevice.h</DeclaredIn>
+			
+			<Declaration>- (void)pressButton:(XCUIDeviceButton)button</Declaration>
+			
+			
+			<Anchor>//api/name/pressButton:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
         
         
 	</File>

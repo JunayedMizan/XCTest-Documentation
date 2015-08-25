@@ -55,6 +55,7 @@
 						<NodeRef refid="23"/>
 						<NodeRef refid="24"/>
 						<NodeRef refid="25"/>
+						<NodeRef refid="26"/>
 						
 					</Subnodes>
 				</Node>
@@ -64,10 +65,10 @@
                     <Name>Blocks</Name>
                     <Path>index.html</Path>
                     <Subnodes>
-                        <NodeRef refid="26"/>
                         <NodeRef refid="27"/>
                         <NodeRef refid="28"/>
                         <NodeRef refid="29"/>
+                        <NodeRef refid="30"/>
                         
                     </Subnodes>
                 </Node>
@@ -530,6 +531,12 @@
                 </Node>
                 
                 
+                <Node type="section">
+                    <Path>Classes/XCUIDevice.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
             </Subnodes>
             
         </Node>
@@ -700,42 +707,47 @@
             
         </Node>
 		<Node id="22" type="file" documentType="reference">
+            <Name>XCUIDeviceButton</Name>
+            <Path>Constants/XCUIDeviceButton.html</Path>
+            
+        </Node>
+		<Node id="23" type="file" documentType="reference">
             <Name>XCUIElementType</Name>
             <Path>Constants/XCUIElementType.html</Path>
             
         </Node>
-		<Node id="23" type="file" documentType="reference">
+		<Node id="24" type="file" documentType="reference">
             <Name>XCUIKeyModifierFlags</Name>
             <Path>Constants/XCUIKeyModifierFlags.html</Path>
             
         </Node>
-		<Node id="24" type="file" documentType="reference">
+		<Node id="25" type="file" documentType="reference">
             <Name>XCUIUserInterfaceSizeClass</Name>
             <Path>Constants/XCUIUserInterfaceSizeClass.html</Path>
             
         </Node>
-		<Node id="25" type="file" documentType="reference">
+		<Node id="26" type="file" documentType="reference">
             <Name>_XCTAssertionType</Name>
             <Path>Constants/_XCTAssertionType.html</Path>
             
         </Node>
 		
-        <Node id="26" type="file" documentType="reference">
+        <Node id="27" type="file" documentType="reference">
             <Name>XCKeyValueObservingExpectationHandler</Name>
             <Path>Blocks/XCKeyValueObservingExpectationHandler.html</Path>
             
         </Node>
-        <Node id="27" type="file" documentType="reference">
+        <Node id="28" type="file" documentType="reference">
             <Name>XCNotificationExpectationHandler</Name>
             <Path>Blocks/XCNotificationExpectationHandler.html</Path>
             
         </Node>
-        <Node id="28" type="file" documentType="reference">
+        <Node id="29" type="file" documentType="reference">
             <Name>XCPredicateExpectationHandler</Name>
             <Path>Blocks/XCPredicateExpectationHandler.html</Path>
             
         </Node>
-        <Node id="29" type="file" documentType="reference">
+        <Node id="30" type="file" documentType="reference">
             <Name>XCWaitCompletionHandler</Name>
             <Path>Blocks/XCWaitCompletionHandler.html</Path>
             
