@@ -1,4 +1,4 @@
-# `XCTest` Documentation - Xcode 7 Beta 6
+# `XCTest` Documentation - Xcode 7 GM
 
 Unofficial documentation for `XCTest`, including UI Testing, introduced in iOS 9.
 
@@ -28,7 +28,7 @@ appledoc \
 --no-repeat-first-par \
 --no-warn-invalid-crossref \
 --install-docset \
-"/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework"
+"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework"
 ```
 
 This will create the docset at `./docset` and install it in the shared directory:
