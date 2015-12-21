@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>XCTestErrorCode Constants Reference</title>
+	<title>XCUIRemoteButton Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">XCTestErrorCode Constants Reference</h1>
+					<h1 class="title">XCUIRemoteButton Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>XCTestErrors.h</td>
+	<td>XCUIRemote.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,15 +75,13 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">XCTestErrorCode</h3>
+                    <h3 class="subsubtitle method-title">XCUIRemoteButton</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>@typedef XCTestErrorCode
-Error codes used with errors in the XCTestErrorDomain.</p>
+                        <p>@enum XCUIRemoteButton</p>
 
-<p>@constant XCTestErrorCodeTimeoutWhileWaiting Indicates that a call to -waitForExpectationsWithTimeout:handler: timed out.
-@constant XCTestErrorCodeFailureWhileWaiting Indicates that a failure assertion was raised while waiting in -waitForExpectationsWithTimeout:handler:.</p>
+<p>A button on a physical remote control.</p>
 					</div>
 					
 					
@@ -91,11 +89,21 @@ Error codes used with errors in the XCTestErrorDomain.</p>
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, XCTestErrorCode ) {<br>
+                        <code>typedef NS_ENUM(NSUInteger, XCUIRemoteButton ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">XCTestErrorCodeTimeoutWhileWaiting</a>,<br>
+                            &nbsp;&nbsp; <a href="">XCUIRemoteButtonUp</a> = 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">XCTestErrorCodeFailureWhileWaiting</a>,<br>
+                            &nbsp;&nbsp; <a href="">XCUIRemoteButtonDown</a> = 1,<br>
+                            
+                            &nbsp;&nbsp; <a href="">XCUIRemoteButtonLeft</a> = 2,<br>
+                            
+                            &nbsp;&nbsp; <a href="">XCUIRemoteButtonRight</a> = 3,<br>
+                            
+                            &nbsp;&nbsp; <a href="">XCUIRemoteButtonSelect</a> = 4,<br>
+                            
+                            &nbsp;&nbsp; <a href="">XCUIRemoteButtonMenu</a> = 5,<br>
+                            
+                            &nbsp;&nbsp; <a href="">XCUIRemoteButtonPlayPause</a> = 6,<br>
                             
                             };</code>
                     
@@ -105,12 +113,11 @@ Error codes used with errors in the XCTestErrorDomain.</p>
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="XCTestErrorCodeTimeoutWhileWaiting"></a><code>XCTestErrorCodeTimeoutWhileWaiting</code></dt>
+                            <dt><a name="" title="XCUIRemoteButtonUp"></a><code>XCUIRemoteButtonUp</code></dt>
 <dd>
 
 
-<p>@typedef XCTestErrorCode
-Error codes used with errors in the XCTestErrorDomain.</p>
+<p>@enum XCUIRemoteButton</p>
 
 
 
@@ -118,17 +125,16 @@ Error codes used with errors in the XCTestErrorDomain.</p>
 
     
 	<p>
-		Declared In <code class="declared-in-ref">XCTestErrors.h</code>.
+		Declared In <code class="declared-in-ref">XCUIRemote.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="XCTestErrorCodeFailureWhileWaiting"></a><code>XCTestErrorCodeFailureWhileWaiting</code></dt>
+                            <dt><a name="" title="XCUIRemoteButtonDown"></a><code>XCUIRemoteButtonDown</code></dt>
 <dd>
 
 
-<p>@typedef XCTestErrorCode
-Error codes used with errors in the XCTestErrorDomain.</p>
+<p>@enum XCUIRemoteButton</p>
 
 
 
@@ -136,7 +142,92 @@ Error codes used with errors in the XCTestErrorDomain.</p>
 
     
 	<p>
-		Declared In <code class="declared-in-ref">XCTestErrors.h</code>.
+		Declared In <code class="declared-in-ref">XCUIRemote.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="XCUIRemoteButtonLeft"></a><code>XCUIRemoteButtonLeft</code></dt>
+<dd>
+
+
+<p>@enum XCUIRemoteButton</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">XCUIRemote.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="XCUIRemoteButtonRight"></a><code>XCUIRemoteButtonRight</code></dt>
+<dd>
+
+
+<p>@enum XCUIRemoteButton</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">XCUIRemote.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="XCUIRemoteButtonSelect"></a><code>XCUIRemoteButtonSelect</code></dt>
+<dd>
+
+
+<p>@enum XCUIRemoteButton</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">XCUIRemote.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="XCUIRemoteButtonMenu"></a><code>XCUIRemoteButtonMenu</code></dt>
+<dd>
+
+
+<p>@enum XCUIRemoteButton</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">XCUIRemote.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="XCUIRemoteButtonPlayPause"></a><code>XCUIRemoteButtonPlayPause</code></dt>
+<dd>
+
+
+<p>@enum XCUIRemoteButton</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">XCUIRemote.h</code>.
 	</p>
 	
 </dd>
@@ -153,7 +244,7 @@ Error codes used with errors in the XCTestErrorDomain.</p>
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">XCTestErrors.h</code></p>
+                        <p><code class="declared-in-ref">XCUIRemote.h</code></p>
                     </div>
                     
                     

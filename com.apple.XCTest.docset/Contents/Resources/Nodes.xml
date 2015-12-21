@@ -28,6 +28,7 @@
 						<NodeRef refid="15"/>
 						<NodeRef refid="16"/>
 						<NodeRef refid="17"/>
+						<NodeRef refid="18"/>
 						
 					</Subnodes>
 				</Node>
@@ -38,9 +39,9 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="18"/>
 						<NodeRef refid="19"/>
 						<NodeRef refid="20"/>
+						<NodeRef refid="21"/>
 						
 					</Subnodes>
 				</Node>
@@ -50,12 +51,13 @@
 					<Name>Constants</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="21"/>
 						<NodeRef refid="22"/>
 						<NodeRef refid="23"/>
 						<NodeRef refid="24"/>
 						<NodeRef refid="25"/>
 						<NodeRef refid="26"/>
+						<NodeRef refid="27"/>
+						<NodeRef refid="28"/>
 						
 					</Subnodes>
 				</Node>
@@ -65,10 +67,10 @@
                     <Name>Blocks</Name>
                     <Path>index.html</Path>
                     <Subnodes>
-                        <NodeRef refid="27"/>
-                        <NodeRef refid="28"/>
                         <NodeRef refid="29"/>
                         <NodeRef refid="30"/>
+                        <NodeRef refid="31"/>
+                        <NodeRef refid="32"/>
                         
                     </Subnodes>
                 </Node>
@@ -613,13 +615,46 @@
             
         </Node>
 		<Node id="17" type="file" documentType="reference">
+            <Name>XCUIRemote</Name>
+            <Path>Classes/XCUIRemote.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/XCUIRemote.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/XCUIRemote.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/XCUIRemote.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/XCUIRemote.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="18" type="file" documentType="reference">
             <Name>_XCTestCaseInterruptionException</Name>
             <Path>Classes/_XCTestCaseInterruptionException.html</Path>
             
         </Node>
 		
 		
-        <Node id="18" type="file" documentType="reference">
+        <Node id="19" type="file" documentType="reference">
             <Name>XCTestObservation</Name>
             <Path>Protocols/XCTestObservation.html</Path>
             
@@ -646,7 +681,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="19" type="file" documentType="reference">
+		<Node id="20" type="file" documentType="reference">
             <Name>XCUIElementAttributes</Name>
             <Path>Protocols/XCUIElementAttributes.html</Path>
             
@@ -673,7 +708,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="20" type="file" documentType="reference">
+		<Node id="21" type="file" documentType="reference">
             <Name>XCUIElementTypeQueryProvider</Name>
             <Path>Protocols/XCUIElementTypeQueryProvider.html</Path>
             
@@ -701,53 +736,58 @@
             
         </Node>
 		
-        <Node id="21" type="file" documentType="reference">
+        <Node id="22" type="file" documentType="reference">
             <Name>XCTestErrorCode</Name>
             <Path>Constants/XCTestErrorCode.html</Path>
             
         </Node>
-		<Node id="22" type="file" documentType="reference">
+		<Node id="23" type="file" documentType="reference">
             <Name>XCUIDeviceButton</Name>
             <Path>Constants/XCUIDeviceButton.html</Path>
             
         </Node>
-		<Node id="23" type="file" documentType="reference">
+		<Node id="24" type="file" documentType="reference">
             <Name>XCUIElementType</Name>
             <Path>Constants/XCUIElementType.html</Path>
             
         </Node>
-		<Node id="24" type="file" documentType="reference">
+		<Node id="25" type="file" documentType="reference">
             <Name>XCUIKeyModifierFlags</Name>
             <Path>Constants/XCUIKeyModifierFlags.html</Path>
             
         </Node>
-		<Node id="25" type="file" documentType="reference">
+		<Node id="26" type="file" documentType="reference">
+            <Name>XCUIRemoteButton</Name>
+            <Path>Constants/XCUIRemoteButton.html</Path>
+            
+        </Node>
+		<Node id="27" type="file" documentType="reference">
             <Name>XCUIUserInterfaceSizeClass</Name>
             <Path>Constants/XCUIUserInterfaceSizeClass.html</Path>
             
         </Node>
-		<Node id="26" type="file" documentType="reference">
+		<Node id="28" type="file" documentType="reference">
             <Name>_XCTAssertionType</Name>
             <Path>Constants/_XCTAssertionType.html</Path>
             
         </Node>
 		
-        <Node id="27" type="file" documentType="reference">
+        <Node id="29" type="file" documentType="reference">
             <Name>XCKeyValueObservingExpectationHandler</Name>
             <Path>Blocks/XCKeyValueObservingExpectationHandler.html</Path>
             
         </Node>
-        <Node id="28" type="file" documentType="reference">
+        <Node id="30" type="file" documentType="reference">
             <Name>XCNotificationExpectationHandler</Name>
             <Path>Blocks/XCNotificationExpectationHandler.html</Path>
             
         </Node>
-        <Node id="29" type="file" documentType="reference">
+        <Node id="31" type="file" documentType="reference">
             <Name>XCPredicateExpectationHandler</Name>
             <Path>Blocks/XCPredicateExpectationHandler.html</Path>
             
         </Node>
-        <Node id="30" type="file" documentType="reference">
+        <Node id="32" type="file" documentType="reference">
             <Name>XCWaitCompletionHandler</Name>
             <Path>Blocks/XCWaitCompletionHandler.html</Path>
             

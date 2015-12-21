@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/XCUIUserInterfaceSizeClass.html">
+	<File path="Constants/XCUIKeyModifierFlags.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/XCUIUserInterfaceSizeClass</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/c/tdef/XCUIKeyModifierFlags</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>XCUIElementAttributes.h</DeclaredIn>
+			<DeclaredIn>XCUIElement.h</DeclaredIn>
             
 			
 			<NodeRef refid="25"/>
@@ -14,31 +14,71 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/XCUIUserInterfaceSizeClassUnspecified</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/XCUIKeyModifierNone</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>XCUIUserInterfaceSizeClassUnspecified</Declaration>
+            <Declaration>XCUIKeyModifierNone</Declaration>
             
-            <DeclaredIn>XCUIElementAttributes.h</DeclaredIn>
+            <DeclaredIn>XCUIElement.h</DeclaredIn>
             
             <NodeRef refid="25"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/XCUIUserInterfaceSizeClassCompact</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/XCUIKeyModifierAlphaShift</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>XCUIUserInterfaceSizeClassCompact</Declaration>
+            <Declaration>XCUIKeyModifierAlphaShift</Declaration>
             
-            <DeclaredIn>XCUIElementAttributes.h</DeclaredIn>
+            <DeclaredIn>XCUIElement.h</DeclaredIn>
             
             <NodeRef refid="25"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/XCUIUserInterfaceSizeClassRegular</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/XCUIKeyModifierShift</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>XCUIUserInterfaceSizeClassRegular</Declaration>
+            <Declaration>XCUIKeyModifierShift</Declaration>
             
-            <DeclaredIn>XCUIElementAttributes.h</DeclaredIn>
+            <DeclaredIn>XCUIElement.h</DeclaredIn>
+            
+            <NodeRef refid="25"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/XCUIKeyModifierControl</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>XCUIKeyModifierControl</Declaration>
+            
+            <DeclaredIn>XCUIElement.h</DeclaredIn>
+            
+            <NodeRef refid="25"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/XCUIKeyModifierAlternate</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>XCUIKeyModifierAlternate</Declaration>
+            
+            <DeclaredIn>XCUIElement.h</DeclaredIn>
+            
+            <NodeRef refid="25"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/XCUIKeyModifierOption</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>XCUIKeyModifierOption</Declaration>
+            
+            <DeclaredIn>XCUIElement.h</DeclaredIn>
+            
+            <NodeRef refid="25"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/XCUIKeyModifierCommand</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>XCUIKeyModifierCommand</Declaration>
+            
+            <DeclaredIn>XCUIElement.h</DeclaredIn>
             
             <NodeRef refid="25"/>
         </Token>

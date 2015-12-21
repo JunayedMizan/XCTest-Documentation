@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>XCTestObservationCenter Class Reference</title>
+	<title>XCUIRemote Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -58,7 +58,7 @@
 	
 	<optgroup label="Class Methods">
 		
-		<option value="//api/name/sharedTestObservationCenter">+ sharedTestObservationCenter</option>
+		<option value="//api/name/sharedRemote">+ sharedRemote</option>
 		
 	</optgroup>
 	
@@ -66,9 +66,9 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/addTestObserver:">- addTestObserver:</option>
+		<option value="//api/name/pressButton:">- pressButton:</option>
 		
-		<option value="//api/name/removeTestObserver:">- removeTestObserver:</option>
+		<option value="//api/name/pressButton:forDuration:">- pressButton:forDuration:</option>
 		
 	</optgroup>
 	
@@ -85,7 +85,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">XCTestObservationCenter Class Reference</h1>
+					<h1 class="title">XCUIRemote Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -94,7 +94,7 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>XCTestObservationCenter.h</td>
+	<td>XCUIRemote.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,17 +104,9 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>@class XCTestObservationCenter</p>
+						<p>@class XCUIRemote</p>
 
-<p>The XCTestObservationCenter distributes information about the progress of test runs to registered
-observers. Observers can be any object conforming to the <a href="../Protocols/XCTestObservation.html">XCTestObservation</a> protocol.</p>
-
-<p>If an NSPrincipalClass is declared in the test bundle&rsquo;s Info.plist, <a href="../Classes/XCTest.html">XCTest</a> automatically creates a
-single instance of that class when the test bundle is loaded. This instance provides a means to register
-observers or do other pretesting global set up.</p>
-
-<p>Observers must be registered manually. The NSPrincipalClass instance is not automatically
-registered as an observer even if the class conforms to <a href="../Protocols/XCTestObservation.html">XCTestObservation</a>.</p>
+<p>Simulates interaction with a physical remote control.</p>
 					</div>
 					
 					
@@ -130,8 +122,8 @@ registered as an observer even if the class conforms to <a href="../Protocols/XC
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/sharedTestObservationCenter" title="sharedTestObservationCenter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sharedTestObservationCenter">+&nbsp;sharedTestObservationCenter</a></code>
+	<a name="//api/name/sharedRemote" title="sharedRemote"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedRemote">+&nbsp;sharedRemote</a></code>
 </h3>
 
 	<div class="method-info">
@@ -141,21 +133,16 @@ registered as an observer even if the class conforms to <a href="../Protocols/XC
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@method +sharedTestObservationCenter</p>
+				<p>The simulated physical remote control.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (XCTestObservationCenter *)sharedTestObservationCenter</code></div>
+			<div class="method-subsection method-declaration"><code>+ (instancetype)sharedRemote</code></div>
 
 		    
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The shared XCTestObservationCenter singleton instance.</p>
-			</div>
 			
 
 			
@@ -169,15 +156,15 @@ registered as an observer even if the class conforms to <a href="../Protocols/XC
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">XCTestObservationCenter.h</code></p>
+				<p><code class="declared-in-ref">XCUIRemote.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/addTestObserver:" title="addTestObserver:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addTestObserver:">&ndash;&nbsp;addTestObserver:</a></code>
+	<a name="//api/name/pressButton:" title="pressButton:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pressButton:">&ndash;&nbsp;pressButton:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -187,12 +174,12 @@ registered as an observer even if the class conforms to <a href="../Protocols/XC
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@method -addTestObserver:</p>
+				<p>Sends a momentary press of a button on a physical remote control.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)addTestObserver:(id&lt;XCTestObservation&gt;)<em>testObserver</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)pressButton:(XCUIRemoteButton)<em>remoteButton</em></code></div>
 
 		    
 			
@@ -204,12 +191,8 @@ registered as an observer even if the class conforms to <a href="../Protocols/XC
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Register an object conforming to <a href="../Protocols/XCTestObservation.html">XCTestObservation</a> as an observer for the current test session. Observers may be added
-at any time, but will not receive events that occurred before they were registered. The observation center maintains a strong
-reference to observers.</p>
-
-<p>Events may be delivered to observers in any order - given observers A and B, A may be notified of a test failure before
-or after B. Any ordering dependencies or serialization requirements must be managed by clients.</p>
+				<p>@param remoteButton
+The button on the physical remote control for which to synthesize a press.</p>
 			</div>
 			
 
@@ -220,15 +203,15 @@ or after B. Any ordering dependencies or serialization requirements must be mana
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">XCTestObservationCenter.h</code></p>
+				<p><code class="declared-in-ref">XCUIRemote.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/removeTestObserver:" title="removeTestObserver:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/removeTestObserver:">&ndash;&nbsp;removeTestObserver:</a></code>
+	<a name="//api/name/pressButton:forDuration:" title="pressButton:forDuration:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pressButton:forDuration:">&ndash;&nbsp;pressButton:forDuration:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -238,12 +221,12 @@ or after B. Any ordering dependencies or serialization requirements must be mana
 			
 			
 			<div class="method-subsection brief-description">
-				<p>@method -removeTestObserver:</p>
+				<p>Sends a press and hold of a button on a physical remote control, holding for the specified duration.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)removeTestObserver:(id&lt;XCTestObservation&gt;)<em>testObserver</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)pressButton:(XCUIRemoteButton)<em>remoteButton</em> forDuration:(NSTimeInterval)<em>duration</em></code></div>
 
 		    
 			
@@ -255,7 +238,11 @@ or after B. Any ordering dependencies or serialization requirements must be mana
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Unregister an object conforming to <a href="../Protocols/XCTestObservation.html">XCTestObservation</a> as an observer for the current test session.</p>
+				<p>@param remoteButton
+The button on the physical remote control for which to synthesize a press.</p>
+
+<p>@param duration
+Duration in seconds.</p>
 			</div>
 			
 
@@ -266,7 +253,7 @@ or after B. Any ordering dependencies or serialization requirements must be mana
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">XCTestObservationCenter.h</code></p>
+				<p><code class="declared-in-ref">XCUIRemote.h</code></p>
 			</div>
 			
 			
